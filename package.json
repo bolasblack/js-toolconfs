@@ -6,6 +6,9 @@
   "repository": "https://github.com/bolasblack/js-toolkit",
   "author": "c4605 <bolasblack@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "test": "exit 0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
     "git-hook-pure": "^1.2.1",
