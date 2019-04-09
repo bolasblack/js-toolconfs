@@ -1,5 +1,7 @@
 # js-toolconfs
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/bolasblack/js-toolconfs.svg)](https://greenkeeper.io/)
+
 Some configuration files for my favorite tools
 
 * [`commitlintrc.js`](https://github.com/conventional-changelog/commitlint/): commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org/).
