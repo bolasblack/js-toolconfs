@@ -10,7 +10,7 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
+    "@commitlint/cli": "^8.0.0",
     "git-hook-pure": "^1.2.1",
     "lint-staged": "^8.1.5",
     "prettier": "^1.16.4"
