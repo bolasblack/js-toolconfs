@@ -17,7 +17,7 @@
   },
   "optionalDependencies": {},
   "dependencies": {
-    "@commitlint/config-conventional": "^7.5.0",
+    "@commitlint/config-conventional": "^8.0.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0"
   },
