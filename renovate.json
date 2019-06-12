@@ -1,0 +1,9 @@
+{
+  "extends": ["config:base", ":semanticCommitTypeAll(chore)"],
+  "packageRules": [
+    {
+      "packagePatterns": ["*"],
+      "rangeStrategy": "bump"
+    }
+  ]
+}
