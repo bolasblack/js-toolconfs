@@ -33,7 +33,9 @@ Some configuration files for my favorite tools
 
   ```json
   {
-    "extends": "@c4605/toolconfs/tsconfig"
+    "extends": "@c4605/toolconfs/tsconfig",
+    "extends": "@c4605/toolconfs/tsconfig-node",
+    "extends": "@c4605/toolconfs/tsconfig-esModule"
   }
   ```
 
