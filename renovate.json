@@ -4,6 +4,11 @@
     {
       "packagePatterns": ["*"],
       "rangeStrategy": "bump"
+    },
+    {
+      "packagePatterns": ["*"],
+      "depTypeList": ["peerDependencies"],
+      "rangeStrategy": "widen"
     }
   ]
 }
