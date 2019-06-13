@@ -2,22 +2,45 @@
 
 Some configuration files for my favorite tools
 
-* [`commitlintrc.js`](https://github.com/conventional-changelog/commitlint/): commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org/).
+- [`commitlintrc.js`](https://github.com/conventional-changelog/commitlint/): commitlint checks if your commit messages meet the [conventional commit format](https://conventionalcommits.org/).
 
-* [`prettierrc.yml`](https://github.com/prettier/prettier): Prettier is an opinionated code formatter.
+  ```js
+  // .commitlintrc.js
+  module.exports = {
+    extends: ['@c4605/toolconfs/commitlintrc'],
+    rules: {},
+  }
+  ```
 
-* [`renovate.json`](https://renovatebot.com/docs/): Automated dependency updates service.
+- [`prettierrc.yml`](https://github.com/prettier/prettier): Prettier is an opinionated code formatter.
 
-    ```json
-    {
-      "extends": [
-        "github>bolasblack/js-toolconfs:renovate"
-      ]
-    }
-    ```
+  ```json
+  // package.json
+  {
+    "prettier": "@c4605/toolconfs/prettierrc"
+  }
+  ```
 
-* [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): The presence of a `tsconfig.json` file in a directory indicates that the directory is the root of a TypeScript project. The `tsconfig.json` file specifies the root files and the compiler options required to compile the project.
+- [`renovate.json`](https://renovatebot.com/docs/): Automated dependency updates service.
 
-* [`tslint.yml`](https://palantir.github.io/tslint/usage/configuration/): An extensible linter for the TypeScript language.
+  ```json
+  {
+    "extends": ["github>bolasblack/js-toolconfs:renovate"]
+  }
+  ```
 
-* [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
+- [`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html): The presence of a `tsconfig.json` file in a directory indicates that the directory is the root of a TypeScript project. The `tsconfig.json` file specifies the root files and the compiler options required to compile the project.
+
+  ```json
+  {
+    "extends": "@c4605/toolconfs/tsconfig"
+  }
+  ```
+
+- [`tslint.yml`](https://palantir.github.io/tslint/usage/configuration/): An extensible linter for the TypeScript language.
+
+  ```yml
+  extends: '@c4605/toolconfs/tslint'
+  ```
+
+- [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
