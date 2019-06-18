@@ -46,3 +46,9 @@ Some configuration files for my favorite tools
   ```
 
 - [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
+
+- [`lint-staged.config.js`](https://github.com/okonet/lint-staged): Run linters against staged git files and don't let 💩 slip into your code base!
+
+  ```js
+  module.exports = require('@c4605/toolconfs/lint-staged.config')
+  ```
