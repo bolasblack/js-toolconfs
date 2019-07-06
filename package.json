@@ -12,7 +12,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "git-hook-pure": "^1.2.2",
-    "lint-staged": "^8.2.1",
+    "lint-staged": "^9.1.0",
     "prettier": "^1.18.2"
   },
   "optionalDependencies": {},
