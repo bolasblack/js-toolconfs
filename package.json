@@ -10,14 +10,14 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.0.0",
+    "@commitlint/cli": "^8.1.0",
     "git-hook-pure": "^1.2.2",
     "lint-staged": "^9.1.0",
     "prettier": "^1.18.2"
   },
   "optionalDependencies": {},
   "dependencies": {
-    "@commitlint/config-conventional": "^8.0.0",
+    "@commitlint/config-conventional": "^8.1.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.0.0"
   },
