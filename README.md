@@ -39,10 +39,16 @@ Some configuration files for my favorite tools
   }
   ```
 
-- [`tslint.yml`](https://palantir.github.io/tslint/usage/configuration/): An extensible linter for the TypeScript language.
+- `eslintrc-ts.js`: eslint config for TypeScript
 
   ```yml
-  extends: '@c4605/toolconfs/tslint'
+  // .eslintrc.js
+  module.exports = {
+    extends: ["./node_modules/@c4605/toolconfs/eslintrc-ts"],
+    parserOptions: {
+      project: './tsconfig.json',
+    },
+  }
   ```
 
 - [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
