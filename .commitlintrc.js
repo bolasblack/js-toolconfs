@@ -1,1 +1,1 @@
-commitlintrc.js
+module.exports = require('./commitlintrc')
