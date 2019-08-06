@@ -1,13 +1,11 @@
-const jsConf = require('./eslintrc-js')
+const jsConf = require('./eslintrc.base.js')
 
 module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint'],
   extends: [
     'plugin:@typescript-eslint/recommended',
-    'prettier',
     'prettier/@typescript-eslint',
-    './eslintrc-js',
   ],
   rules: {
     // off
