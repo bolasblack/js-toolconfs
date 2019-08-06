@@ -33,23 +33,18 @@ Some configuration files for my favorite tools
 
   ```json
   {
-    "extends": [
-      "@c4605/toolconfs/tsconfig.base",
-      "@c4605/toolconfs/tsconfig.node",
-      "@c4605/toolconfs/tsconfig.esModule"
-    ],
+    "extends": "@c4605/toolconfs/tsconfig",
+    "extends": "@c4605/toolconfs/tsconfig-node",
+    "extends": "@c4605/toolconfs/tsconfig-esModule"
   }
   ```
 
-- [`eslintrc.js`](https://eslint.org/docs/user-guide/configuring): eslint configs
+- `eslintrc-ts.js`: eslint config for TypeScript
 
   ```yml
   // .eslintrc.js
   module.exports = {
-    extends: [
-      "./node_modules/@c4605/toolconfs/eslintrc.base",
-      "./node_modules/@c4605/toolconfs/eslintrc.ts"
-    ],
+    extends: ["./node_modules/@c4605/toolconfs/eslintrc-ts"],
     parserOptions: {
       project: './tsconfig.json',
     },
