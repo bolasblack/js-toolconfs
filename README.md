@@ -12,6 +12,12 @@ Some configuration files for my favorite tools
   }
   ```
 
+  And install packages:
+
+  ```bash
+  yarn add @commitlint/config-conventional -D
+  ```
+
 - [`prettierrc.yml`](https://github.com/prettier/prettier): Prettier is an opinionated code formatter.
 
   ```json
@@ -39,16 +45,25 @@ Some configuration files for my favorite tools
   }
   ```
 
-- `eslintrc-ts.js`: eslint config for TypeScript
+- `eslintrc.[type].js`: eslint config for TypeScript
 
   ```yml
   // .eslintrc.js
   module.exports = {
-    extends: ["./node_modules/@c4605/toolconfs/eslintrc-ts"],
+    extends: [
+      "./node_modules/@c4605/toolconfs/eslintrc.base",
+      "./node_modules/@c4605/toolconfs/eslintrc.ts",
+    ],
     parserOptions: {
       project: './tsconfig.json',
     },
   }
+  ```
+
+  And install packages:
+
+  ```bash
+  yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier -D
   ```
 
 - [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
