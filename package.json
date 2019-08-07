@@ -9,13 +9,13 @@
   "scripts": {
     "test": "eslint ./*.js"
   },
-  "optionalDependencies": {},
-  "peerDependencies": {
+  "optionalDependencies": {
     "@commitlint/config-conventional": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^1.13.0",
     "@typescript-eslint/parser": "^1.13.0",
     "eslint-config-prettier": "^6.0.0"
   },
+  "peerDependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
