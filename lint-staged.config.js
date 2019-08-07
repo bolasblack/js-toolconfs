@@ -1,4 +1,6 @@
-const { js, css, md } = require('./lint-staged.helpers')
+const {
+  presets: { js, css, md },
+} = require('./lint-staged.helpers')
 
 module.exports = {
   '*.{ts,tsx}': js,

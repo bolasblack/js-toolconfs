@@ -1,15 +1,17 @@
+const path = require('path')
+
 const wrap = fn => next => (filenames, commands) =>
-  next(filenames, commands || []).concat(fn(filenames))
+  ensureArray(next(filenames, ensureArray(commands))).concat(fn(filenames))
 
 const tap = fn => next => (filenames, commands) => {
   fn(filenames, commands)
-  return next(filenames, commands || [])
+  return ensureArray(next(filenames, ensureArray(commands)))
 }
 
 const finish = (filenames, commands) => commands
 
 const gitAdd = wrap(filenames => {
-  const cliFileNames = wrapFileNames(filenames)
+  const cliFileNames = fileNamesToCliArg(filenames)
 
   // prettier-ignore
   return [
@@ -18,7 +20,7 @@ const gitAdd = wrap(filenames => {
 })
 
 const prettier = wrap(filenames => {
-  const cliFileNames = wrapFileNames(filenames)
+  const cliFileNames = fileNamesToCliArg(filenames)
 
   // prettier-ignore
   return [
@@ -27,7 +29,7 @@ const prettier = wrap(filenames => {
 })
 
 const eslint = wrap(filenames => {
-  const cliFileNames = wrapFileNames(
+  const cliFileNames = fileNamesToCliArg(
     filenames.filter(f => !f.includes('eslint')),
   )
 
@@ -45,17 +47,28 @@ module.exports = {
     tap,
     finish,
   },
-  utils: {
+  atoms: {
     prCmds,
+    prettier,
+    eslint,
+    gitAdd,
   },
-  prettier,
-  eslint,
-  gitAdd,
-  js: gitAdd(eslint(prettier(finish))),
-  css: gitAdd(prettier(finish)),
-  md: gitAdd(prettier(finish)),
+  presets: {
+    js: gitAdd(eslint(prettier(finish))),
+    css: gitAdd(prettier(finish)),
+    md: gitAdd(prettier(finish)),
+  },
+  helpers: {
+    ensureArray,
+    fileNamesToCliArg,
+  },
 }
 
-function wrapFileNames(names) {
-  return names.map(f => '"' + f + '"').join(' ')
+function ensureArray(obj) {
+  if (obj == null) return []
+  return Array.isArray(obj) ? obj : [obj]
+}
+
+function fileNamesToCliArg(names, base = process.cwd()) {
+  return names.map(f => `"${path.relative(base, f)}"`).join(' ')
 }
