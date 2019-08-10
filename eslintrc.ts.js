@@ -17,22 +17,22 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
-    // warn
-    '@typescript-eslint/no-floating-promises': 'warn',
+    // error
+    '@typescript-eslint/no-floating-promises': 'error',
     '@typescript-eslint/no-unused-vars': jsConf.rules['no-unused-vars'],
     '@typescript-eslint/explicit-member-accessibility': [
-      'warn',
+      'error',
       { accessibility: 'no-public' },
     ],
     '@typescript-eslint/no-object-literal-type-assertion': [
-      'warn',
+      'error',
       {
         allowAsParameter: true,
       },
     ],
     // for next version of eslint
     // '@typescript-eslint/consistent-type-assertions': [
-    //   'warn',
+    //   'error',
     //   {
     //     objectLiteralTypeAssertions: 'allow-as-parameter',
     //   },

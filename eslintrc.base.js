@@ -3,15 +3,15 @@ module.exports = {
   rules: {
     // off
     'max-classes-per-file': 'off',
-    // warn
-    'no-shadow': ['warn', { builtinGlobals: true, hoist: 'never' }],
+    // error
+    'no-shadow': ['error', { builtinGlobals: true, hoist: 'never' }],
     'no-unused-vars': [
-      'warn',
+      'error',
       {
         args: 'none',
         caughtErrors: 'none',
       },
     ],
-    curly: ['warn', 'multi-line'],
+    curly: ['error', 'multi-line'],
   },
 }
