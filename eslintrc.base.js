@@ -3,8 +3,8 @@ module.exports = {
   rules: {
     // off
     'max-classes-per-file': 'off',
+    'no-shadow': 'off',
     // error
-    'no-shadow': ['error', { builtinGlobals: true, hoist: 'never' }],
     'no-unused-vars': [
       'error',
       {
