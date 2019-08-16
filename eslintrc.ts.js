@@ -24,18 +24,11 @@ module.exports = {
       'error',
       { accessibility: 'no-public' },
     ],
-    '@typescript-eslint/no-object-literal-type-assertion': [
+    '@typescript-eslint/consistent-type-assertions': [
       'error',
       {
-        allowAsParameter: true,
+        objectLiteralTypeAssertions: 'allow-as-parameter',
       },
     ],
-    // for next version of eslint
-    // '@typescript-eslint/consistent-type-assertions': [
-    //   'error',
-    //   {
-    //     objectLiteralTypeAssertions: 'allow-as-parameter',
-    //   },
-    // ],
   },
 }
