@@ -7,7 +7,7 @@
   "author": "c4605 <bolasblack@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "test": "eslint ./*.js"
+    "test": "eslint ./**/*.js"
   },
   "optionalDependencies": {
     "@commitlint/config-conventional": "^8.1.0",
