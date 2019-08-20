@@ -1,5 +1,4 @@
 module.exports = {
-  extends: ['prettier'],
   rules: {
     // off
     'max-classes-per-file': 'off',
