@@ -3,7 +3,7 @@
   "packageRules": [
     {
       "packagePatterns": ["*"],
-      "rangeStrategy": "bump"
+      "rangeStrategy": "replace"
     },
     {
       "packagePatterns": ["*"],
