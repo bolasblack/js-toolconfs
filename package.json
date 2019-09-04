@@ -1,6 +1,6 @@
 {
   "name": "@c4605/toolconfs",
-  "version": "4.7.0",
+  "version": "4.7.1",
   "description": "Some configuration files for my favorite tools",
   "main": null,
   "repository": "https://github.com/bolasblack/js-toolkit",
@@ -21,8 +21,8 @@
     "@commitlint/config-conventional": "^8.1.0",
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
-    "eslint-config-prettier": "^6.2.0",
     "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.2.0",
     "git-hook-pure": "^1.2.2",
     "lint-staged": "^9.2.5",
     "prettier": "^1.18.2",
