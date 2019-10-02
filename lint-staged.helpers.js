@@ -11,6 +11,8 @@ const tap = fn => next => (filenames, commands) => {
 const finish = (filenames, commands) => commands
 
 const gitAdd = wrap(filenames => {
+  if (!filenames.length) return []
+
   const cliFileNames = fileNamesToCliArg(filenames)
 
   // prettier-ignore
@@ -20,6 +22,8 @@ const gitAdd = wrap(filenames => {
 })
 
 const prettier = wrap(filenames => {
+  if (!filenames.length) return []
+
   const cliFileNames = fileNamesToCliArg(filenames)
 
   // prettier-ignore
@@ -29,6 +33,8 @@ const prettier = wrap(filenames => {
 })
 
 const eslint = wrap(filenames => {
+  if (!filenames.length) return []
+
   const cliFileNames = fileNamesToCliArg(
     filenames.filter(f => !f.includes('eslint')),
   )
