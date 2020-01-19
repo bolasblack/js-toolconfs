@@ -52,6 +52,7 @@ Some configuration files for my favorite tools
   module.exports = {
     extends: [
       "./node_modules/@c4605/toolconfs/eslintrc.base",
+      "./node_modules/@c4605/toolconfs/eslintrc.prettier",
       "./node_modules/@c4605/toolconfs/eslintrc.ts",
     ],
     parserOptions: {
@@ -63,7 +64,12 @@ Some configuration files for my favorite tools
   And install packages:
 
   ```bash
-  yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier -D
+  # ts
+  yarn add @typescript-eslint/eslint-plugin @typescript-eslint/parser -D
+  # prettier
+  yarn add eslint-config-prettier eslint-plugin-prettier -D
+  # react
+  yarn add eslint-plugin-react eslint-plugin-react-hooks -D
   ```
 
 - [`.githooks`](https://github.com/bolasblack/git-hook-pure): git hook more freely and quickly
