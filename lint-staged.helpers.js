@@ -10,17 +10,6 @@ const tap = fn => next => (filenames, commands) => {
 
 const finish = (filenames, commands) => commands
 
-const gitAdd = wrap(filenames => {
-  if (!filenames.length) return []
-
-  const cliFileNames = fileNamesToCliArg(filenames)
-
-  // prettier-ignore
-  return [
-    'git add ' + cliFileNames,
-  ]
-})
-
 const prettier = wrap(filenames => {
   if (!filenames.length) return []
 
@@ -57,12 +46,11 @@ module.exports = {
     prCmds,
     prettier,
     eslint,
-    gitAdd,
   },
   presets: {
-    js: gitAdd(eslint(prettier(finish))),
-    css: gitAdd(prettier(finish)),
-    md: gitAdd(prettier(finish)),
+    js: eslint(prettier(finish)),
+    css: prettier(finish),
+    md: prettier(finish),
   },
   helpers: {
     ensureArray,
@@ -76,5 +64,5 @@ function ensureArray(obj) {
 }
 
 function fileNamesToCliArg(names, base = process.cwd()) {
-  return names.map(f => `"${path.relative(base, f)}"`).join(' ')
+  return names.map(f => path.relative(base, f)).join(' ')
 }

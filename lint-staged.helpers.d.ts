@@ -27,8 +27,6 @@ export namespace atoms {
   export const prettier: CombinableLinterFn
 
   export const eslint: CombinableLinterFn
-
-  export const gitAdd: CombinableLinterFn
 }
 
 export namespace presets {

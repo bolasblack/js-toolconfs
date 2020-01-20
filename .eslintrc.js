@@ -1,9 +1,18 @@
 module.exports = {
-  extends: ['./eslintrc.base.js', './eslintrc.prettier.js', './eslintrc.ts.js'],
+  extends: ['./eslintrc.base.js', './eslintrc.prettier.js'],
   parserOptions: {
-    project: './_internal/tsconfig.json',
+    ecmaVersion: 2020,
   },
-  rules: {
-    '@typescript-eslint/no-var-requires': 'off',
-  },
+  overrides: [
+    {
+      files: ['**/*.ts', '**/*.tsx'],
+      extends: ['./eslintrc.ts.js'],
+      parserOptions: {
+        project: './_internal/tsconfig.json',
+      },
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off',
+      },
+    },
+  ],
 }
