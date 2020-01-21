@@ -17,9 +17,10 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     '@typescript-eslint/no-parameter-properties': 'off',
     '@typescript-eslint/no-use-before-define': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     // error
     '@typescript-eslint/no-floating-promises': 'error',
-    '@typescript-eslint/no-unused-vars': jsConf.rules['no-unused-vars'],
+    '@typescript-eslint/no-unused-vars-experimental': 'error',
     '@typescript-eslint/explicit-member-accessibility': [
       'error',
       { accessibility: 'no-public' },

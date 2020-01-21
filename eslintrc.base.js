@@ -9,6 +9,7 @@ module.exports = {
       {
         args: 'none',
         caughtErrors: 'none',
+        argsIgnorePattern: '^_',
       },
     ],
     curly: ['error', 'multi-line'],
