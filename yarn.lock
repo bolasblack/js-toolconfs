@@ -1037,10 +1037,10 @@ get-stream@^5.0.0:
   dependencies:
     pump "^3.0.0"
 
-git-hook-pure@^1.2.2:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/git-hook-pure/-/git-hook-pure-1.2.2.tgz#4f1bca0aafcc5f0b10afbdfff0d660b80d9a19ea"
-  integrity sha512-92QKlRmhq5B5WbPHFtgwBQnH3ZucNzsiJOd8jqVPxeSpxzqTIrkHGhOkgX3bs1sASffqCCWt6uBGD2RE0198AA==
+git-hook-pure@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/git-hook-pure/-/git-hook-pure-3.0.0.tgz#abd90144e668d68a5178582e575b94baa3acd5a1"
+  integrity sha512-xGc1VVNq/AZg1QXYG8X7vPg/8nGSyhwyuWHl9aGm4kHzHmyeBtQcxkkuX+S7C4kKXsGq3sT7oseXnFVDLKyLrw==
 
 git-raw-commits@^2.0.0:
   version "2.0.3"
