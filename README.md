@@ -1,4 +1,4 @@
-# js-toolconfs
+# js-toolconfs (Moved to the [new repo](https://github.com/bolasblack/js-metarepo/tree/develop/packages/toolconfs))
 
 Some configuration files for my favorite tools
 
